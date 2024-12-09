@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cycling Images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <body>
+    <div class="leftColumn backgroundColor center-content">
+      <div class="smallRow">
+        <h1>
+          Memory! Try to match the pokemon with the matching subtypes. If you
+          get stuck then you can click the hint button on the bottom left.
+        </h1>
+        <h1></h1>
+        <div id="life-counter">Fails remaining: <span id="fails">3</span></div>
+        <div id="hint">
+          <img src="images/light.png" class="clickable" onclick="showHint()" />
+        </div>
+      </div>
+    </div>
+    <div class="rightSide">
+      <div class="rightColumn">
+        <div class="row">
+          <div class="box clickable center-content" id="B1" onclick="fly()">
+            <img
+              class="center-content"
+              src="images/pokemon.JPG"
+              id="flygonimg"
+            />
+          </div>
+          <div
+            class="box clickable center-content"
+            id="B2"
+            onclick="turtonator()"
+          >
+            <img src="images/pokemon.JPG" id="turtonatorimg" />
+          </div>
+          <div class="box clickable center-content" id="B3" onclick="garch()">
+            <img src="images/pokemon.JPG" id="garchompimg" />
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="box clickable center-content"
+            id="B4"
+            onclick="charizard()"
+          >
+            <img src="images/pokemon.JPG" id="charizardimg" />
+          </div>
+          <div class="box clickable center-content" id="B5" onclick="alt()">
+            <img src="images/pokemon.JPG" id="altariaimg" />
+          </div>
+          <div
+            class="box clickable center-content"
+            id="B6"
+            onclick="dragonite()"
+          >
+            <img src="images/pokemon.JPG" id="dragoniteimg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="myModal">
+      <div class="modal-body">
+        <!-- BUILD YOUR LAYOUT HERE -->
+        <div class="half light-grey center-content">
+          <img
+            class="clickable"
+            src="images/dBall.png"
+            id="dragonBall"
+            onclick="nextRoom()"
+          />
+        </div>
+        <div class="half dark-grey center-content">
+          <h1>TAKE MY POKEBALL TO MOVE ONTO THE NEXT ROOM!</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="Lose">
+      <div class="modal-body">
+        <!-- BUILD YOUR LAYOUT HERE -->
+        <div class="half light-grey center-content">
+          <img
+            class="clickable"
+            src="images/tryAgain.png"
+            onclick="hideLose()"
+          />
+        </div>
+        <div class="half dark-grey center-content">
+          <h1>YOU LOST, CLICK THE BUTTON TO RETRY!</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="light">
+      <span class="close" onclick="hideHint()">&times;</span>
+      <div class="modal-body">
+        <div class="backgroundColor center-content hintBox">
+          <h1>FOCUS ON THE COLOR OF THE CARDS!</h1>
+        </div>
+      </div>
+    </div>
+    <div class="initial-modal center-content" id="first">
+      <div class="modal-body">
+        <div class="center-content nocolor">
+          <img
+            src="images/trainer.png"
+            id="train"
+            class="clickable"
+            onclick="startText()"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="modal center-content" id="start">
+      <div class="modal-body">
+        <div class="center-content half clickable">
+          <img src="images/text1.png" id="text" onclick="nextText()" />
+        </div>
+        <div class="center-content">
+          <img src="images/trainer.png" id="train" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <audio src="sounds/winner.mp3" type="audio/mp3" id="you-win"></audio>
+  <audio
+    src="sounds/backgroundMusic.mp3"
+    type="audio/mp3"
+    id="backMusic"
+  ></audio>
+  <audio src="sounds/fail.mp3" type="audio/mp3" id="wompWomp"></audio>
+  <audio src="sounds/succeed.mp3" type="audio/mp3" id="wooHoo"></audio>
+  <audio src="sounds/Pokeballwobble1.mp3" type="audio/mp3" id="1wobble"></audio>
+  <audio src="sounds/Pokeballwobble2.mp3" type="audio/mp3" id="2wobble"></audio>
+  <audio src="sounds/Pokeballcaught.mp3" type="audio/mp3" id="caught"></audio>
+  <audio src="sounds/wrong.mp3" type="audio/mp3" id="wrong"></audio>
+  <script src="script.js"></script>
+  <script src="preload.js"></script>
+</html>

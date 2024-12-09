@@ -1,0 +1,224 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+.hintBox {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.smallBox {
+  height: 100%;
+  width: 50%;
+}
+.smallRow {
+  height: 25%;
+  width: 100%;
+  display: flex;
+}
+.top-row {
+  height: 30%;
+  width: 100%;
+  display: flex;
+}
+.middle-row {
+  height: 60%;
+  width: 100%;
+}
+.bottom-row {
+  height: 10%;
+  width: 100%;
+}
+.square {
+  height: 100%;
+  width: 25%;
+}
+.nocolor {
+  height: 20%;
+  width: 100%;
+}
+.half {
+  height: 50%;
+  width: 100%;
+}
+/* build your layout */
+.leftColumn {
+  height: 100%;
+  width: calc(100% / 3);
+  display: block;
+  background-image: url("images/scroll.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.row {
+  display: flex;
+  height: 30%;
+  width: 50%;
+}
+.rightSide {
+  height: 100%;
+  width: 66.66%;
+  background-image: url("images/gym.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rightColumn {
+  height: 100%;
+  width: 109%;
+  display: block;
+  margin-left: 295px;
+  margin-top: 300px;
+}
+.box {
+  height: 100%;
+  width: calc(100% / 3);
+}
+
+/* control your content */
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* colors */
+.black {
+  background-color: #000000;
+}
+.blue {
+  background-color: dodgerblue;
+}
+.pink {
+  background-color: #eb5674;
+}
+.yellow {
+  background-color: #fbee40;
+}
+.backgroundColor {
+  background-color: rgb(228, 198, 143);
+}
+.orange {
+  background-color: #fd5632;
+}
+.grey {
+  background-color: #d3d3d3;
+}
+.red {
+  background-color: darkred;
+}
+.brown {
+  background-color: burlywood;
+}
+.sky-blue {
+  background-color: skyblue;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+}
+.clickable {
+  filter: brightness(85%) drop-shadow(1px 4px 1.5px);
+}
+.clickable:hover {
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(2px 8px 3px);
+}
+.clickable:active {
+  filter: drop-shadow(0px 0px 3px);
+  transform: scale(0.98);
+}
+.opacity {
+  opacity: 0.5;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  opacity: 0.98;
+}
+.modal-body {
+  width: 80%;
+  height: 70%;
+  opacity: 1;
+  margin: 0;
+}
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#life-counter {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+}
+#life-counter span {
+  font-weight: bold;
+}
+#hint {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  font-size: 20px;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 5%;
+}
+.initial-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/startGym.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.pokeball {
+  top: -1100px;
+  height: 104px;
+  width: 104px;
+  left: 900px;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+}
+.spin-image {
+  width: 104px;
+  height: 104px;
+  transition: transform 5s ease-in-out;
+  transform-style: preserve-3d;
+}
