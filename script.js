@@ -256,7 +256,7 @@ function nextText() {
   }
 }
 function nextRoom() {
-  window.location.href = "https://3pfxzn.csb.app/";
+  window.location.href = "https://chdavinci.github.io/pokemonchampion/";
 }
 function startText() {
   document.getElementById("start").style.display = "flex";
